@@ -1,1 +1,155 @@
-Hello!
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+  <meta name=viewport content="width=device-width, initial-scale=1">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <meta name="theme-color" content="#F4C300">    
+  
+  <title>The Gamma</title>
+
+  <meta name="description" content="The Gamma is a research project that aims to make it easier to build reproducible, open and interactive data visualizations." />
+  <meta name="keywords" content="The Gamma, Interactive Graphics, Data Journalism" />  
+  <meta name="author" content="Tomas Petricek" />
+  <meta name="application-name" content="The Gamma" />
+  <meta name="copyright" content="The Gamma" />
+  
+  <meta property="og:title" content="The Gamma" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://thegamma.net" />
+  <meta property="og:image" content="http://thegamma.net/card.png" />
+  <meta property="og:description" content="The Gamma is a research project that aims to make it easier to build reproducible, open and interactive data visualizations." />
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@thegamma_net">
+  <meta name="twitter:creator" content="@tomaspetricek">  
+  <meta name="twitter:title" content="The Gamma" />
+  <meta name="twitter:image" content="http://thegamma.net/card.png" />
+  <meta name="twitter:description" content="The Gamma is a research project that aims to make it easier to build reproducible, open and interactive data visualizations." />
+  
+  <style>
+    @import url(http://fonts.googleapis.com/css?family=Inconsolata|Kreon:300,400,700|Roboto:400,700,400italic);
+    body { 
+      background:black;
+      font-family:Roboto;
+      color:#a0a0a0;
+      font-size:16pt;
+    }
+    a {
+      text-decoration:none;
+      color:white;
+    }
+    a:hover {
+      text-decoration:underline;
+      color:white;
+    }
+    footer {
+      max-width:600px;
+      clear:both;
+      margin:0px auto 0px auto;
+    }
+    header img {
+      width:150px;
+      margin-right:50px;
+      float:left;
+    }
+    header {
+      margin:9vw auto 0px auto;
+      max-width:600px;
+      padding-bottom:20px;
+    }
+    header p {
+      font-size:20pt;
+      margin:0px;
+    }
+    @media only screen and (max-width:600px) {
+      header { text-align:center; }
+      header img { float:none; margin:0px; }
+    }    
+    section {
+      clear:both;
+      max-width:1200px;
+      margin:0px auto 0px auto;
+    }
+    h1 {
+      font-family:Kreon;
+      font-size:50pt;
+      margin:0px;
+      color:white;
+    }
+    h2 {
+      font-family:Kreon;
+      font-size:28pt;
+      margin:0px;
+      color:white;
+    }
+    .project {
+      max-width:600px;
+      float:left;
+      padding:100px 0px 100px 0px;
+    }
+    .project p {
+      margin-right:20px;
+    }
+    section img {
+      width:300px;
+    }
+    .ct { 
+      text-align:center; 
+      margin:0px;
+    }
+    @media only screen and (max-width:1200px) {
+      section { max-width:600px; }
+      .project { padding:30px 10px 30px 10px; }
+      footer { padding:10px; }
+    }    
+    @media only screen and (min-width:600px) {
+      .project { width:600px; }
+    }    
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" />
+    <h1> The Gamma</h1>
+    <p>Experiments in Tooling<br /> for Data-Driven Storytelling</p>
+  </header>
+  
+  <section>
+    <div class="project">
+      <h2><a href="http://rio2016.thegamma.net">Visualizing Olympic Medals</a></h2>
+      <p>This project shows a second iteration of The Gamma. You can explore a number of 
+        interactive visualizations built around the Olympic medals data set, inspired 
+        by the work of The Guardian around London 2012 Olympics. Code for all the 
+        visualizations can be run, modified and shared from the browser.</p>
+        <div class="ct"><a href="http://rio2016.thegamma.net"><img src="projects/olympics.png" style="width:200px;" /></a></div>
+      </div>
+    <div class="project">
+      <h2><a href="http://prototype.thegamma.net">World Bank Carbon Emissions</a></h2>
+      <p>This project was an early experiment built around the F# language and a type
+        provider for World Bank data. The <a href="http://prototype.thegamma.net/carbon">Carbon Emissions</a>
+        report is an example interactive article built using the prototype. It takes some time to
+        load, but you can also watch a <a href="https://vimeo.com/140314257">15 minute demo</a>
+        or a <a href="https://www.youtube.com/watch?v=cYoO2RvZn7Y">45 minute talk</a> abotu the
+        project.</p>
+      <div class="ct"><a href="http://rio2016.thegamma.net"><img src="projects/carbon.png" style="width:200px;" /></a></div>
+    </div>
+  </section>
+  
+  <footer>
+    <p>For more information about The Gamma project, follow us at <a href="http://twitter.com/thegamma_net">@thegamma_net</a>. 
+      For early vision behind the project, see our <a href="files/cj2015.pdf">Computation + Journalsim 2015</a> paper.
+    </p>
+    <p>
+      If you want to speak to a human, contact <a href="http://tomasp.net">Tomas Petricek</a> at 
+      <a href="http://twitter.com/tomaspetricek">@tomaspetricek</a> or
+      <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a>. We would love to hear from you and 
+      collaborate!</p>
+  </footer>
+</body>
+</html>
