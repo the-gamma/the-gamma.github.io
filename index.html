@@ -1,0 +1,321 @@
+---
+layout: default
+title: The Gamma
+---
+
+<script type="text/thegamma" id="demo">let data =
+  olympics
+    .'filter data'.'Games is'.'Rio (2016)'.then
+    .'group data'.'by Athlete'.'sum Gold'.then
+    .'sort data'.'by Gold descending'.then
+    .paging.take(8)
+    .'get series'.'with key Athlete'.'and value Gold'
+  
+chart.column(data).legend(position="none")
+  .set(fontName="Roboto", fontSize=14)
+  .set(colors=["#F4C300"], title="Top medalists (by number of gold medals) at Rio 2016")
+</script>
+<div id="sizer"></div>
+  
+<header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><span><strong>The Gamma</strong>: Tools for open data-driven storytelling</span></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Let anyone aggregate and visualize data with the <strong>simplicity of 
+        spread&shy;sheet</strong> tools, but produce repro&shy;ducible source code making  
+        the analysis fully <strong>transparent and open</strong>.</p>
+      <h2><span>Simple yet powerful</span></h2>
+    </div>
+    <div class="col-sm-4">
+      <p>Create embedded tables and charts that are <strong>linked to the original 
+        source</strong> and encourage the reader to <strong>explore data further</strong>
+        and find more fun facts on their own!</p>
+      <h2><span>Exploratory and fun</span></h2>
+    </div>
+    <div class="col-sm-4">
+      <p>Built at <strong>The Alan Turing Institute</strong>, available as
+        open-source using the permissive MIT license and supported through
+        the <strong>Google Digital News Initiative</strong>.</p>
+       <h2><span>Open and trusted</span></h2>
+    </div>
+  </div>
+</div>
+</header>
+  
+<article>  
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Understand and visualize data easily</h2>
+      <p>The Gamma makes it extremely easy to sumamrize data and create useful tables and 
+        nice visualizations. Thanks to the built-in pivot type provider, the language 
+        understands your data source and exposes all operations in an easy to discover
+        way. Just type dot and see what columns and operations on them are available!      
+      </p>
+<pre class="shadow">
+<span class="c2">olympics</span>
+  .<span class="c1">'filter data'</span>.'Games is'.'Rio (2016)'.<span class="c3">then</span>
+  .<span class="c1">'group data'</span>.'by Athlete'.'sum Gold'.<span class="c3">then</span>
+  .<span class="c1">'sort data'</span>.'by Gold descending'.<span class="c3">then</span>
+  .<span class="c1">'paging'</span>.take(<span class="n">8</span>)
+  .<span class="c1">'get series'</span>.'with key Athlete'.'and value Gold'
+</pre>      
+      <p>This example calculates the top 8 medalists from Rio 2016 Olympic games, 
+        sorted by the total number of gold medals. You can understand the code even 
+        without programming experience - we filter all Olympic medals to cover only
+        Rio, then we sum gold medals per athlete, take the top 8 and return a 
+        data series that maps athlete name to number of gold medals they won.</p>
+      <p>With The Gamma, you can edit the code by hand with modern tooling that offers
+        available members when you type dot, but you can also use live editor that 
+        shows the results instantly and lets you modify the code from a simple user 
+        interface. Try it below!</p>
+    </div>
+  </div>
+  
+  <div id="demo" class="shadow">
+  <div class="row">
+    <div class="col-md-4" style="padding:20px 0px 0px 40px">
+      <h3>Visualizing Olympic medals</h3>
+      <p>If you want to see The Gamma in action, check out the 
+        <a href="http://rio2016.thegamma.net/">visualizations of Olympic medalists</a>,
+        which was created using early version of the project. See also 
+        <a href="http://tomasp.net/blog/2016/thegamma-olympic-medalists/">blog post documenting</a>
+        some of its features.
+      </p>
+      <p>
+        Click below to view and edit the code in our innovative editor 
+        with live previews! Can you change it to see medals for London 2012?
+      </p>
+      <button class="btn btn-success" id="editbtn" style="margin-bottom:20px;">Edit source code</button>
+    </div>
+    <div class="col-md-8">
+      <div id="out1" class="output">
+        <div class="placeholder">
+          Loading the visualization...
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Best of programming and spreadsheets</h2>    
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">    
+      <p>Almost anyone can use a spreadsheet to perform basic data analysis and create a chart,
+        but doing the same in a transparent and more flexible way using a programming language has 
+        always been a task for experts. What would an environment somewhere between spreadsheet
+        tools and programming language look like? </p>
+      
+      <p>When exploring data in The Gamma, you can always see the data you're working with just 
+        like when manipulating data using a spreadsheet. You can write the code to transform 
+        data using a modern, powerful editor with autocomplete that understands the data source 
+        and suggests what operations and columns are available.</p>
+      
+      <p>You do not always need to write code. For many common operations such as 
+        grouping, sorting and filtering data, the live preview lets you add and configure data
+        transformations in a simple user interface. However, the code is always visible and so
+        anyone can understand your data analysis and reproduce it. </p>
+      
+    </div>
+  </div>
+  <div id="screen" class="shadow">
+  <div class="row">
+    <div class="col-md-12">
+      <img src="/img/preview-1.gif" style="display:none" id="img1a" />
+      <img src="/img/preview-1-still.png" style="max-width:100%;cursor:pointer;" id="img1b" /><br />
+      <script type="text/javascript">
+        var p1 = false;
+        document.getElementById("img1b").onclick = function() {
+          document.getElementById("img1b").src = p1 ? "/img/preview-1-still.png" : document.getElementById("img1a").src;
+          p1 = !p1;
+        }
+      </script>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Extensible and simple JavaScript library</h2>
+      <p>The Gamma is <a href="https://www.npmjs.com/package/thegamma-script">available on npm</a>
+        and you can use it as any other JavaScript component. It provides a simple and extensible
+        API that lets you specify data sources available in the programming environment, create
+        rich editor for your users and run scripts written using The Gamma. The library is open-source,
+        <a href="http://github.com/the-gamma/thegamma-script">hosted on GitHub</a> and available under
+        the permissive MIT license. If you have some suggestion, please
+        <a href="https://github.com/the-gamma/thegamma-script/issues">open an issue</a>!</p> 
+            
+      <p>When using The Gamma, you need to specify data sources like the <code>olympics</code>
+        value used in the above demos. This is done by defining one or more type providers that
+        are available in the program environment - those are created as simple REST services, 
+        as documented in <a href="/publishing">publishing data</a>, and specified in The Gamma
+        API as follows (using <code>example.com</code>):</p>
+      
+<pre class="shadow">
+<span class="n">// Specify data source and available libraries</span>
+<span class="k">var</span> svc <span class="o">=</span> <span class="s">"http://example.com/services/olympics"</span>;      
+<span class="k">var</span> lib <span class="o">=</span> <span class="s">"http://example.com/lib/libraries.json"</span>;
+
+<span class="n">// Create type providers exposing 'olympics' data</span>
+<span class="k">var</span> providers <span class="o">=</span> 
+  g<span class="o">.</span>providers<span class="o">.</span>createProviders({ 
+    <span class="s">"libraries"</span><span class="o">:</span> g<span class="o">.</span>providers<span class="o">.</span>library(lib),
+    <span class="s">"olympics"</span><span class="o">:</span> g<span class="o">.</span>providers<span class="o">.</span>pivot(svc) });
+
+<span class="n">// Create evaluation and checking context</span>    
+<span class="k">var</span> ctx <span class="o">=</span> g<span class="o">.</span>gamma<span class="o">.</span>createContext(providers);
+</pre>
+
+      <p>You can find the full documentation for the JavaScript API on the
+        <a href="/developers">page for developers</a>. The above example defines two type
+        providers. First, the pivot type provider, which takes a data source and lets the user
+        perform aggregation over the data. This is what you can see in the above GIF and 
+        play with in the Olympic medalists demo. The second provider exposes JavaScript libraries,
+        using metadata specified in a <code>json</code> file. This defines the <code>chart</code> 
+        and <code>table</code> types used in the demo.        
+      </p>
+      
+      <p>The following code snippet illustrates some of the operations that you can do
+        once you create program context, such as running programs and creating a source
+        code editor:</p>
+
+<pre class="shadow">
+<span class="n">// Run code and render output to out-elem-1</span>
+<span class="k">var</span> code <span class="o">=</span> <span class="s">"your script goes here"</span>;
+ctx<span class="o">.</span>evaluate(code, <span class="s">"out-elem-1"</span>);
+
+<span class="n">// Specify options for the code editor</span>
+<span class="k">var</span> opts <span class="o">=</span> 
+  { height<span class="o">:</span> <span class="n">800</span>,
+    width<span class="o">:</span> <span class="n">1000</span>,
+    monacoOptions<span class="o">:</span> <span class="k">function</span>(m) {
+      m<span class="o">.</span>fontFamily <span class="o">=</span> <span class="s">"Inconsolata"</span>;
+      m<span class="o">.</span>fontSize <span class="o">=</span> <span class="n">15</span>;
+  }};
+
+<span class="n">// Create editor, get and set the source</span>
+<span class="k">var</span> editor <span class="o">=</span> ctx<span class="o">.</span>createEditor(<span class="s">"ed-elem-1"</span>, code, opts);
+editor<span class="o">.</span>setValue(code);
+editor<span class="o">.</span>getValue();
+</pre>  
+      <p>Once you create context, you can use the <code>evaluate</code> function to 
+        run any script written using The Gamma (this does not even require the editor).
+        This is used on this page to create the chart of top Olympic medalists from 
+        Rio 2016 that you can see above. The <code>createEditor</code> function is
+        then used when you click on the "Edit source code" button.</p>
+      <p>As you can see, thanks to The Gamma,  creating an open and transparent environment
+        that encourages readers to explore data on their own is just a matter of writing 
+        a couple of simple lines of code!</p>
+
+      <h2>Getting started with The Gamma</h2>
+      <ul>
+        <li><a href="/exploring">Exploring data</a>: Learn more about The Gamma script
+          and the code you can write to transform data in our editor. This
+          is a non-programmer guide to using The Gamma.</li>
+        <li><a href="/developers">For developers</a>: Learn how to use our JavaScript
+          package and about the functionality it currently exposes. For discussion and
+          issues, follow the <a href="http://github.com/the-gamma/thegamma-script">project 
+          on GitHub</a>.</li>
+        <li><a href="/publishing">Publishing data</a>: Create a service that exposes data
+          for the pivot type provider. The service needs to provie a single end-point that
+          can return the data and evaluate simple aggregations.</li>
+        <li><a href="/contributing">Contributing</a>: If you are a developer and want to
+          help us, this is the place to start. The Gamma is written using the <a href="http://fsharp.org/">awesome
+          F# language</a> and compiled to JavaScript <a href="http://fable.io/">using Fable</a>,
+          so this is fun project if you want to play with some nice technology!</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</article>
+
+<div class="modal fade" id="editor" tabindex="-1" role="dialog">
+  <div class="modal-dialog" style="width:80vw; max-width:1000px">
+    <div class="modal-content" style="height:90vh">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title">The Gamma editor</h4>
+      </div>
+      <div class="modal-body">
+        <div id="ed1"></div>
+        <div id="ed1-errors" class="errors"></div>
+        <button class="btn btn-success" id="okbtn" style="margin-top:20px">Update page</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js" 
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/lib/thegamma/babel.min.js"></script>
+<script src="/lib/thegamma/require.js"></script>
+<script>
+  require.config({
+    paths:{'vs':'/lib/thegamma/vs'},
+    map:{ "*":{"monaco":"vs/editor/editor.main"}}
+  });
+  require(["monaco", "/lib/thegamma/thegamma.js"], function (_, g) {      
+    var services = "http://thegamma-services.azurewebsites.net/";      
+    var providers = 
+      g.providers.createProviders({ 
+        "libraries": g.providers.library("/lib/thegamma/libraries.json"),
+        "olympics": g.providers.pivot(services + "pdata/olympics") });
+        
+    // Create context which is used to create editor & run code
+    var ctx = g.gamma.createContext(providers);
+    ctx.errorsReported(function (errs) { 
+      var lis = errs.slice(0, 5).map(function (e) { 
+        return $("<li>")
+          .append($("<span class='err'>error " + e.number + "<span>"))
+          .append($("<span class='loc'>at line " + e.startLine + " col " + e.startColumn + "</span>"))
+          .append(": " + e.message);          
+      });        
+      var ul = $("<ul>").append(lis);
+      $("#ed1-errors").empty().append(ul);
+    });
+
+    // Get sample code and run it; use the '#out1' element for outputs
+    var code = document.getElementById("demo").innerText;
+    ctx.evaluate(code, "out1");
+
+    // We create editor lazily when the "Edit source code" button is clicked the first time
+    var editor = null;
+    var editbtn = document.getElementById("editbtn");
+    var okbtn = document.getElementById("okbtn");
+    
+    // Options passed to the editor - specify size & configuration function
+    // that sets properties directly for the Monaco editor
+    var opts =
+      { height: document.getElementById("sizer").clientHeight - 150,
+        width: document.getElementById("sizer").clientWidth - 40,
+        monacoOptions: function(m) {
+          m.fontFamily = "Inconsolata";
+          m.fontSize = 15;
+          m.lineHeight = 20;
+          m.lineNumbers = false;
+        } };
+
+    // Create editor if it is not created yet
+    editbtn.onclick = function() {
+      $('#editor').modal();
+      if (!editor) editor = ctx.createEditor("ed1", code, opts);
+    };
+    
+    // Get editor text and run it on the main page
+    okbtn.onclick = function() { 
+      $('#editor').modal('hide');
+      code = editor.getValue();
+      ctx.evaluate(code, "out1");
+    };
+  });
+</script>
