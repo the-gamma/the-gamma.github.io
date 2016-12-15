@@ -8,7 +8,27 @@
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="/lib/thegamma/thegamma.css" rel="stylesheet">
   <link href="/lib/style.css" rel="stylesheet">
-  <title>{{ page.title }}</title>
+  
+  <title>{{ page.title }}: {{ page.subtitle }} | The Gamma</title>
+  <meta name="description" content="{{ page.description }}" />
+  <meta name="keywords" content="data journalism, interactive storytelling, visualization, open data" />  
+  <meta name="author" content="Tomas Petricek" />
+  <meta name="copyright" content="The Gamma" />
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <meta name="theme-color" content="#F4C300">    
+  
+  <meta property="og:title" content="{{ page.title }}: {{ page.subtitle }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://thegamma.net{{ page.permalink }}" />
+  <meta property="og:image" content="http://thegamma.net/img/logo.png" />  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@thegamma_net" />
+  <meta name="twitter:title" content="{{ page.title }}: {{ page.subtitle }}" />
+  <meta name="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:image" content="http://thegamma.net/img/logo.png" />  
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -22,19 +42,20 @@
         </button>
         <a class="navbar-brand" href="/">
           <img alt="The Gamma" src="/img/logo.png" style="width:32px;float:left;">
-          <span>The Gamma</span>
+          <span class="hidden-sm">The Gamma</span>
         </a>
       </div>
   
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="/exploring">Exploring data</a></li>
-          <li><a href="/developers">For developers</a></li>
-          <li><a href="/publishing">Publishing data</a></li>
-          <li><a href="/contributing">Contributing</a></li>
+          <li><a href="/exploring">Explore data</a></li>
+          <li><a href="/developers">Developers</a></li>
+          <li><a href="/publishing">Publish data</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contributing">Contribute</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">GitHub &nbsp; <i class="fa fa-github"></i></a></li>
+          <li><a href="#"><span class="hidden-sm">GitHub &nbsp;</span> <i class="fa fa-github"></i></a></li>
         </ul>
       </div>
     </div>

@@ -1,6 +1,12 @@
 ---
 layout: default
 title: The Gamma
+subtitle: Tools for open data-driven storytelling
+permalink: /
+description: The Gamma is a simple library for creating transparent and open data-driven 
+  visualizations. It lets anyone aggregate and visualize data with the simplicity of spread­sheet 
+  tools, but produce repro­ducible source code linked to the original data source that encourages
+  further data exploration.
 ---
 
 <script type="text/thegamma" id="demo">let data =
@@ -57,13 +63,13 @@ chart.column(data).legend(position="none")
         understands your data source and exposes all operations in an easy to discover
         way. Just type dot and see what columns and operations on them are available!      
       </p>
-<pre class="shadow">
-<span class="c2">olympics</span>
-  .<span class="c1">'filter data'</span>.'Games is'.'Rio (2016)'.<span class="c3">then</span>
-  .<span class="c1">'group data'</span>.'by Athlete'.'sum Gold'.<span class="c3">then</span>
-  .<span class="c1">'sort data'</span>.'by Gold descending'.<span class="c3">then</span>
-  .<span class="c1">'paging'</span>.take(<span class="n">8</span>)
-  .<span class="c1">'get series'</span>.'with key Athlete'.'and value Gold'
+<pre>
+<span class="s">olympics</span>
+  .<span class="k">'filter data'</span>.'Games is'.'Rio (2016)'.<span class="o">then</span>
+  .<span class="k">'group data'</span>.'by Athlete'.'sum Gold'.<span class="o">then</span>
+  .<span class="k">'sort data'</span>.'by Gold descending'.<span class="o">then</span>
+  .<span class="k">'paging'</span>.take(<span class="n">8</span>)
+  .<span class="k">'get series'</span>.'with key Athlete'.'and value Gold'
 </pre>      
       <p>This example calculates the top 8 medalists from Rio 2016 Olympic games, 
         sorted by the total number of gold medals. You can understand the code even 
@@ -127,7 +133,7 @@ chart.column(data).legend(position="none")
       
     </div>
   </div>
-  <div id="screen" class="shadow">
+  <div class="preview shadow">
   <div class="row">
     <div class="col-md-12">
       <img src="/img/preview-1.gif" style="display:none" id="img1a" />
