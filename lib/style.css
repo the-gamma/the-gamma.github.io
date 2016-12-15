@@ -59,6 +59,7 @@ header {
 header h1 {
   font:400 24pt Kreon,'Times New Roman',times,serif;
   margin:0px 0px 50px 0px;
+  line-height:34pt;
 }
 header h2 {
   font:300 18pt Kreon,'Times New Roman',times,serif;
