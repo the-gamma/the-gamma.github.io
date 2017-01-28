@@ -66,7 +66,7 @@ GET http://example.com/olympics?
   [ "Simone Biles", 4 ] ]
 ```
 
-As you can see, parts of the query are separated by `$` and they represent the inidividual steps
+As you can see, parts of the query are separated by `$` and they represent the individual steps
 of the data transformation. The part `series(Athlete,Gold)` at the end specifies what data we
 want to get - here, we want to get the result as a _series_, which is a simple list of key value
 pairs, stored as nested lists.

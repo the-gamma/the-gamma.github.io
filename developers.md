@@ -105,7 +105,7 @@ can users write in The Gamma editor:
 
  - The `library` provider takes a JSON that specifies the types and structure of JavaScript 
    libraries - the `thegamma-script` package comes with a couple of wrappers for Google Charts
-   and for generating tables that you can see in the [Olympic Medallists demo](http://rio2016.thegamma.net/).
+   and for generating tables that you can see in the [Olympic Medalists demo](http://rio2016.thegamma.net/).
    You can create your own too, but it's not documented yet...
    
  - The `rest` provider is not fully documented yet, but it lets you provide types that expose
