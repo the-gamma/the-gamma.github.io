@@ -282,7 +282,7 @@ editor<span class="o">.</span>getValue();
     ctx.errorsReported(function (errs) { 
       var lis = errs.slice(0, 5).map(function (e) { 
         return $("<li>")
-          .append($("<span class='err'>error " + e.number + "<span>"))
+          .append($("<span class='err'>error " + e.number + "</span>"))
           .append($("<span class='loc'>at line " + e.startLine + " col " + e.startColumn + "</span>"))
           .append(": " + e.message);          
       });        
