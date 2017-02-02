@@ -18,7 +18,7 @@ description: The Gamma is a simple library for creating transparent and open dat
     .'get series'.'with key Athlete'.'and value Gold'
   
 chart.column(data).legend(position="none")
-  .set(fontName="Roboto", fontSize=14)
+  .set(fontName="Roboto,sans-serif", fontSize=14)
   .set(colors=["#F4C300"], title="Top medalists (by number of gold medals) at Rio 2016")
 </script>
 <div id="sizer"></div>
@@ -296,7 +296,7 @@ editor<span class="o">.</span>getValue();
     });
 
     // Get sample code and run it; use the '#out1' element for outputs
-    var code = document.getElementById("demo").innerText;
+    var code = document.getElementById("demo").innerHTML;
     ctx.evaluate(code, "out1");
 
     // We create editor lazily when the "Edit source code" button is clicked the first time
