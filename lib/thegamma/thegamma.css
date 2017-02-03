@@ -348,3 +348,24 @@
   color:#e0e0e0;
   background:#606060;
 }
+
+/***************************************************************************************************
+  You Draw It visualization
+***************************************************************************************************/
+
+.youdraw {
+  background:white;
+  padding:50px;
+}
+.youdraw svg{
+	overflow: visible;
+}
+.youdraw .axis{
+  opacity:0.5;
+}
+.youdraw .line{
+  fill: none;
+}
+.youdraw .area{
+  fill: transparent;
+}
