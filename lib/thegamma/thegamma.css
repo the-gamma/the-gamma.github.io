@@ -348,6 +348,12 @@
   color:#e0e0e0;
   background:#606060;
 }
+.thegamma button:disabled {
+  border-color:#606060 !important;
+  color:#e0e0e0 !important;
+  background:#606060 !important;
+  opacity:0.5;
+}
 
 /***************************************************************************************************
   You Draw It visualization
