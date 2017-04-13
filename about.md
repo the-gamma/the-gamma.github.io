@@ -60,7 +60,7 @@ load, but you can also watch a <a href="https://vimeo.com/140314257">15 minute d
 or a <a href="https://www.youtube.com/watch?v=cYoO2RvZn7Y">45 minute talk</a> about the
 project.
 
-For more information about the project, see our [Computation + Journalsim 2015 paper](/files/cj2015.pdf),
+For more information about the project, see our [Computation + Journalism 2015 paper](/files/cj2015.pdf),
 which explains the early thinking behind The Gamma and interesting technical aspects of the prototype.
 
 
