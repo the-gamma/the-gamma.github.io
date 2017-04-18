@@ -269,13 +269,8 @@
 ***************************************************************************************************/
 
 .thegamma .errors {
-  position:absolute;
-  background:white;
-  bottom:65px;
-  right:10px;
-  left:10px;
   padding:5px;
-  width:calc(100%-40px);
+  width:100%;
   font:12pt Roboto;
 }
 .thegamma .errors ul, .thegamma .errors li {
