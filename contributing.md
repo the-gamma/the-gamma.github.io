@@ -20,14 +20,14 @@ If you want to run everything locally, you'll need to clone and run the followin
    via [Fable](http://fable.io).
 
  - [**thegamma-sample-web**](https://github.com/the-gamma/thegamma-sample-web) is a minimal web
-   site that you can use for testing your changes. This is a pure node.js web page using the 
+   site that you can use for testing your changes. This is a pure Node.js web page using the 
    [Express](http://expressjs.com/) framework. Live version is [running on 
-   Azure](http://thegamma-sample-web.azurewebsites.net/), but it's a plain node.js web site and will
+   Azure](http://thegamma-sample-web.azurewebsites.net/), but it's a plain Node.js web site and will
    run anywhere.
    
  - [**thegamma-services**](http://thegamma-sample-web.azurewebsites.net/) implements the REST service
    that provides data for the sample visualizations. This is built using F# and [Suave](http://suave.io)
-   and there is a number of scripts. The data source for Olympic medals is implemented
+   and there are a number of scripts. The data source for Olympic medals is implemented
    [here](https://github.com/the-gamma/thegamma-services/blob/master/src/pdata/server.fsx).
 
 ## Getting started with F# &nbsp;
