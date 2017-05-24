@@ -28,7 +28,7 @@ npm run start
 ```
 
 The `npm run start` command should start a local server at [localhost:8089](http://localhost:8089/)
-and open a browser with the sample web page. We use node.js just to get the latest version of
+and open a browser with the sample web page. We use Node.js just to get the latest version of
 thegamma-script from npm and serve static files, but there is no server-side processing here
 (in a real web page, you probably also do not want to expose the contents of your 
 `node_modules` in the server, but we do this to make the demo simpler).
