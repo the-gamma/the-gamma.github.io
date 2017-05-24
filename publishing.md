@@ -123,9 +123,10 @@ top few elements (10 or 20 is typically good).
 The `<query>` part is a sequence of transformations separated by `$` such as
 `<transform>$...$<transform>` where a single `<transform>` can be:
 
- - `filter(<cond>,<cond>,...)` specifies we should only return rows matching given conditions;
+ - `filter([and|or],<cond>,<cond>,...)` specifies we should only return rows matching given conditions;
    `<cond>` is either `<field> eq <value>` or `<field> neq <value>` requiring the given field
-   to be (or not to be) a given value. 
+   to be (or not to be) a given value. The first parameter specifies how multiple conditions are
+   combined (with `and` being the default value if the parameter is missing).
  - `drop(<field>,<field>,...)` specifies that the given fields should be dropped from the results
  - `sort(<sort>,<sort>,...)` specifies how data should be sorted; `<sort>` can be either
    `<field> desc` (sort descendingly by a field) or `<field> asc`.
