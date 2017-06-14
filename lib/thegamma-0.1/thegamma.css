@@ -20,6 +20,7 @@
   background:transparent;
   width:80%;
   position:fixed;
+  max-width:1000px;
 }
 
 .thegamma-dialog {
@@ -44,7 +45,6 @@
   margin:auto;
   border:1px solid #888;
   width:80%;
-  height:90%;
   margin-top:5%;
   border-radius:5px;
   border:1px solid rgba(0,0,0,0.2);
@@ -53,6 +53,8 @@
   box-shadow:5px 5px 15px 0px rgba(0,0,0,0.5);
   border-style:none;
   background:#f0f0f0;
+  max-width:1000px;
+  height:80%;
 }
 
 .thegamma-dialog-window .header {
@@ -70,6 +72,7 @@
 .thegamma-dialog-window .body {
   position:relative;
   padding:10px;
+  padding-bottom:0px;
 }
 
 .thegamma .placeholder {
@@ -78,6 +81,37 @@
   font-size:15pt;
   background:white;
   padding:100px 20px 100px 20px
+}
+
+/***************************************************************************************************
+  Edit source code link with SVG fa-code icon
+***************************************************************************************************/
+
+.thegamma .thegamma-edit-p {
+  text-align:right;
+  font:inherit;
+  font-size:11pt;
+  margin-bottom:0px;
+}
+.thegamma .thegamma-edit-p svg {
+  width:15px;
+  height:15px;
+  margin-bottom:-4px;  
+}
+.thegamma .thegamma-edit-p a {
+  color:#8a8a8a;
+  text-decoration:none;
+  cursor:pointer;
+}
+.thegamma .thegamma-edit-p a path {
+  fill:#8a8a8a;
+}
+.thegamma .thegamma-edit-p a:hover, .thegamma .thegamma-edit-p a:active {
+  color:#bababa;
+  text-decoration:none;
+}
+.thegamma .thegamma-edit-p a:hover path, .thegamma .thegamma-edit-p a:active path {
+  fill:#bababa;
 }
 
 /***************************************************************************************************
@@ -269,10 +303,15 @@
 ***************************************************************************************************/
 
 .thegamma .errors {
-  padding:5px;
-  width:100%;
   font:12pt Roboto;
+  background:white;
+  position:absolute;
+  bottom:70px;
+  width:auto;
+  left:10px;
+  right:10px;
 }
+
 .thegamma .errors ul, .thegamma .errors li {
   list-style:none;
   margin:0px;
@@ -348,25 +387,4 @@
   color:#e0e0e0 !important;
   background:#606060 !important;
   opacity:0.5;
-}
-
-/***************************************************************************************************
-  You Draw It visualization
-***************************************************************************************************/
-
-.youdraw {
-  background:white;
-  padding:50px;
-}
-.youdraw svg{
-	overflow: visible;
-}
-.youdraw .axis{
-  opacity:0.5;
-}
-.youdraw .line{
-  fill: none;
-}
-.youdraw .area{
-  fill: transparent;
 }
