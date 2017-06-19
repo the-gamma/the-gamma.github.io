@@ -129,8 +129,30 @@
   border-bottom:solid 3px #F4C300;
   z-index:1000;
 }
+/* formatting of tables inside preview to avoid overflow */
 .thegamma .pivot-preview .table {
   margin-bottom:0px;
+}
+.thegamma .preview-body { 
+  overflow:auto; width:100%; 
+}
+.thegamma .preview-body .thegamma-table td div, .preview-body .thegamma-table th div { 
+  white-space:nowrap; 
+  max-width:400px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.thegamma .pivot-preview ::-webkit-scrollbar  {
+  width:6px;
+  height:6px;
+  background:#f0f0f0;
+}
+.thegamma .pivot-preview ::-webkit-scrollbar-track {
+  background:transparent;
+}
+.thegamma .pivot-preview ::-webkit-scrollbar-thumb {
+  border-radius:3px;
+  background-color:#F4C300;
 }
 
 /** tabs that list the operations applied so far and "+" button **/
