@@ -136,6 +136,11 @@
 .thegamma .preview-body { 
   overflow:auto; width:100%; 
 }
+.thegamma .preview-body iframe {
+  border-style:none;
+  width:100%;
+  min-height:400px
+}
 .thegamma .preview-body .thegamma-table td div, .preview-body .thegamma-table th div { 
   white-space:nowrap; 
   max-width:400px;
