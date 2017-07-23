@@ -404,7 +404,7 @@
   border-radius:6px;
   cursor:pointer;
 }
-.thegamma button:hover, .thegamma button:focus {
+.thegamma button:hover, .thegamma button:focus, .thegamma button:active, .thegamma button:active:focus {  
   border-color:#606060;
   color:#e0e0e0;
   background:#606060;
