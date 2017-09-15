@@ -162,4 +162,4 @@ Currently, the best example available is the F# implementation of the service th
 [Olympic medalists data](https://github.com/the-gamma/thegamma-services/blob/master/src/pdata/server.fsx).
 Adding more sample services is high on our list of priorities, but it might also be a good
 area where you can help the project! If you're interested in writing a sample data service in 
-a language other than F#, check out the [/contributing](/contributing) and get in touch!
+a language other than F#, check out the [contributing page](/contributing) and get in touch!
