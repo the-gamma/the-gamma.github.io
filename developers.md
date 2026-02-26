@@ -82,7 +82,7 @@ As another example, we also provide `worldbank` value, which is another kind of 
 (see below). Finally, we specify the libraries that are available to use in the user code:
 
 ```js
-var services = "http://thegamma-services.azurewebsites.net/";
+var services = "https://services.thegamma.net/services/";
 var libs = "/node_modules/thegamma-script/dist/libraries.json";
 
 var providers = 
