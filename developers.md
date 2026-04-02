@@ -162,7 +162,7 @@ var code = document.getElementById("demo").innerText;
 ctx.evaluate(code, "out1");
 ```
 
-### Creting and using the editor
+### Creating and using the editor
 
 Finally, the last feature that is currently exposed in The Gamma API is creating an editor that lets 
 users modify code snippets. To create the editor, we first need to provide options. The available 
